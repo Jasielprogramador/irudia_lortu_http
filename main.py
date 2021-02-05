@@ -12,9 +12,6 @@ uria = 'http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx'
 goiburuak = {'Host ': 'www.httpwatch.com'}
 edukia = ''
 
-# resp = requests.head("http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx")
-# print(resp.status_code)
-
 
 erantzuna = requests.request(metodoa, uria, timeout=2.50)
 
