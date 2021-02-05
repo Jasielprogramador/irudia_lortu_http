@@ -13,13 +13,14 @@ goiburuak = {'Host ': 'www.httpwatch.com'}
 edukia = ''
 
 
-erantzuna = requests.request(metodoa, uria, timeout=2.50)
+erantzuna = requests.request(metodoa, uria, data=edukia, allow_redirects=False)
 
 # Orain erantzunetik datuak aterako ditugu
 # HTTP erantzunak 4 atal ditu: kodea, deskribapena, goiburuak eta edukia
 
 kodea = erantzuna.status_code
 deskribapena = erantzuna.reason
+
 print(str(kodea) + " " + deskribapena)
 for goiburua in erantzuna.headers:
     print(goiburua + ": " + erantzuna.headers[goiburua])
