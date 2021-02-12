@@ -27,6 +27,6 @@ for goiburua in erantzuna.headers:
 edukia = erantzuna.content
 print(edukia)
 
-fitxategia = open("irudia.jpg", 'wb')
+fitxategia = open("irudia.jpg", 'wb') #Write binary
 fitxategia.write(edukia)
 fitxategia.close()
